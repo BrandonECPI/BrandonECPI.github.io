@@ -1,90 +1,119 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+  <meta charset="UTF-8" />
+  <meta name="description" content="Welcome to my homepage for my project. Learn more about me and my work!" />
+  <meta name="keywords" content="HTML, CSS, student project, web design" />
+  <meta name="author" content="Brandon Lazala" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   
-<meta charset="UTF-8" />
-<meta name="description" content=" Welcome to my homepage for my project.
-Learn more about me and my work!" />
-<meta name="keywords" content="HTML, CSS, student project, web design" />
-<meta name="author" content="Brandon Lazala" />
-<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  
-<title>My Homepage</title>
-<link rel="stylesheet" href="style.css">
+  <title>My Homepage</title>
+  <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
 
 <header>
-<h1>Welcome to My Homepage!</h1>
+  <h1>Welcome to My Homepage!</h1>
 </header>
 
-<nav>
-<ul>
-<li><a href="#about">About</a></li>
-<li><a href="#projects">Projects</a></li>
-<li><a href="#contact">Contact</a></li>
-</ul>
+<!-- Navigation with Flexbox -->
+<nav class="flex-nav">
+  <ul>
+    <li><a href="#about">About</a></li>
+    <li><a href="#projects">Projects</a></li>
+    <li><a href="#contact">Contact</a></li>
+  </ul>
 </nav>
 
-<main>
-<section id="about">
-<h2>About Me</h2>
-<p>Hello! My name is Brandon Lazala. I am learning how to design and build websites using HTML and CSS. This homepage is part of my project!</p>
-</section>
+<!-- Main Content Flexbox -->
+<main class="flex-main">
 
-<section id="projects">
-<h2>Projects</h2>
-<p>Here are two recent web design projects I worked on:</p>
+  <section id="about">
+    <h2>About Me</h2>
+    <p>Hello! My name is Brandon Lazala. I am learning how to design and build websites using HTML and CSS. This homepage is part of my project!</p>
+  </section>
 
-<table>
-<caption>Sample Web Design Projects</caption>
+  <section id="projects">
+    <h2>Projects</h2>
+    <p>Here are two recent web design projects I worked on:</p>
 
-<colgroup>
-<col style="background-color:#E3F2FD">
-<col>
-<col style="background-color:#E3F2FD">
-</colgroup>
+    <table>
+      <caption>Sample Web Design Projects</caption>
 
-<thead>
-<tr>
-<th>Project Name</th>
-<th>Description</th>
-<th>Preview</th>
-</tr>
-</thead>
+      <colgroup>
+        <col style="background-color:#E3F2FD">
+        <col>
+        <col style="background-color:#E3F2FD">
+      </colgroup>
 
-<tbody>
-<tr>
-<td>Portfolio Website</td>
-<td>A personal website to display my skills and school projects.</td>
-<td><img src="https://www.freepik.com/free-vector/illustration-gallery-icon_2922280.htm#fromView=keyword&page=1&position=0&uuid=53d61a82-02dd-41fe-a6fd-c3085c3d6b3e&query=Placeholder" alt="Project 1"></td>
-</tr>
+      <thead>
+        <tr>
+          <th>Project Name</th>
+          <th>Description</th>
+          <th>Preview</th>
+        </tr>
+      </thead>
 
-<tr>
-<td>Café Menu Page</td>
-<td>A styled webpage with a menu and images for a mock café.</td>
-<td><img src="https://www.freepik.com/free-vector/illustration-gallery-icon_2922280.htm#fromView=keyword&page=1&position=0&uuid=53d61a82-02dd-41fe-a6fd-c3085c3d6b3e&query=Placeholder" alt="Project 2"></td>
-</tr>
-</tbody>
+      <tbody>
+        <tr>
+          <td>Portfolio Website</td>
+          <td>A personal website to display my skills and school projects.</td>
+          <td><img src="https://via.placeholder.com/100" alt="Project 1"></td>
+        </tr>
 
-<tfoot>
-<tr>
-<td colspan="3">More projects coming soon!</td>
-</tr>
-</tfoot>
+        <tr>
+          <td>Café Menu Page</td>
+          <td>A styled webpage with a menu and images for a mock café.</td>
+          <td><img src="https://via.placeholder.com/100" alt="Project 2"></td>
+        </tr>
+      </tbody>
 
-</table>
+      <tfoot>
+        <tr>
+          <td colspan="3">More projects coming soon!</td>
+        </tr>
+      </tfoot>
 
-</section>
+    </table>
+  </section>
 
-<section id="contact">
-<h2>Contact</h2>
-<p>Email me if you would like to connect and talk about my work.</p>
-</section>
+  <!-- Contact Section with Form -->
+  <section id="contact" class="flex-contact">
+    <h2>Contact</h2>
+    <p>Email me if you would like to connect and talk about my work.</p>
+
+    <form action="#" method="post">
+      <div class="form-group">
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name" required>
+      </div>
+
+      <div class="form-group">
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required>
+      </div>
+
+      <div class="form-group">
+        <label for="subject">Subject:</label>
+        <input type="text" id="subject" name="subject">
+      </div>
+
+      <div class="form-group">
+        <label for="message">Message:</label>
+        <textarea id="message" name="message" rows="5"></textarea>
+      </div>
+
+      <div class="form-group">
+        <input type="submit" value="Send Message">
+      </div>
+    </form>
+  </section>
+
+</main>
 
 <footer>
-<p>&copy; 2025 My Homepage — All rights reserved</p>
+  <p>&copy; 2025 My Homepage — All rights reserved</p>
 </footer>
 
 </body>
