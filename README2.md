@@ -1,4 +1,3 @@
-## Technologies Used
 
 ## Languages
 - HTML5
