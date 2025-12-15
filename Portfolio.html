@@ -1,58 +1,110 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Brandon Lazala's Portfolio</title>
-    <link rel="stylesheet" href="Portfolio.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Brandon Lazala's Portfolio</title>
+  <link rel="stylesheet" href="Portfolio.css" />
 </head>
+
 <body>
 
-    <!-- WELCOME MODAL -->
-    <div id="welcomeModal" class="modal">
-        <div class="modal-content">
-            <p>This page is a work in progress.</p>
-            <button id="closeModalBtn">Close</button>
-        </div>
+  <!-- Welcome Modal -->
+  <div id="welcomeModal" class="modal">
+    <div class="modal-content">
+      <p>This page is a work in progress.</p>
+      <button id="closeModalBtn" type="button">Close</button>
     </div>
+  </div>
 
-    <!-- PAGE CONTENT -->
-    <header>
-        <h1>Welcome to My Page</h1>
-    </header>
+  <header>
+    <h1>Brandon Lazala – Portfolio</h1>
+  </header>
 
-    <!-- DARK MODE TOGGLE -->
-    <div class="dark-mode-container">
-        <label>Dark Mode:</label>
-        <label class="switch">
-            <input type="checkbox" id="darkModeToggle">
-            <span class="slider"></span>
-        </label>
-    </div>
+  <!-- Dark Mode Toggle -->
+  <div class="dark-mode-container">
+    <label for="darkModeToggle">Dark Mode:</label>
+    <label class="switch">
+      <input type="checkbox" id="darkModeToggle" />
+      <span class="slider"></span>
+    </label>
+  </div>
 
-    <!-- CONTACT FORM -->
-    <section id="contact">
-        <h2>Contact Me</h2>
+  <!-- Navigation -->
+  <nav>
+    <a href="#about">About</a>
+    <a href="#projects">Projects</a>
+    <a href="#contact">Contact</a>
+  </nav>
 
-        <form>
-            <label>Name:</label>
-            <input type="text" required>
+  <main>
 
-            <label>Email:</label>
-            <input type="email" required>
+    <!-- ABOUT SECTION -->
+    <section id="about">
+      <h2>About Me</h2>
+      <p>
+        Hello! My name is Brandon Lazala, and I am a Software Developer student
+        working on developing skills in programming and web development.
+        I enjoy learning new technologies and coding projects that help me
+        grow as a developer.
+      </p>
 
-            <label>Message:</label>
-            <textarea required></textarea>
-
-            <!-- SUBMIT BUTTON WITH TOOLTIP -->
-            <div class="tooltip">
-                <button type="submit" id="submitBtn">Submit</button>
-                <span class="tooltiptext">Click to send your message!</span>
-            </div>
-        </form>
+      <h3>My Skills</h3>
+      <ul id="skillsList"></ul>
     </section>
 
-    <script src="Portfolio.js"></script>
+    <!-- PROJECTS SECTION (DYNAMIC RENDER TARGET) -->
+    <section id="projects">
+      <h2>My Projects</h2>
+      <p>Projects are displayed dynamically using JavaScript.</p>
 
+      <!-- JS will render project cards into this container -->
+      <div id="projectsContainer" class="projects-container"></div>
+    </section>
+
+    <!-- FEATURED CONTENT SECTION -->
+    <section id="featured">
+      <h2>Featured Content</h2>
+
+      <div id="universityResources" class="featureBox">
+        <h3>University Resources</h3>
+        <a href="https://www.ecpi.edu" target="_blank" rel="noopener">ECPI Homepage</a><br>
+        <a href="https://ecpi.edu/online" target="_blank" rel="noopener">ECPI Online Programs</a>
+      </div>
+
+      <div id="personalProjects" class="featureBox">
+        <h3>Personal Projects</h3>
+        <a href="#" target="_blank" rel="noopener"><img src="#" alt="Personal Project 1"></a>
+        <a href="#" target="_blank" rel="noopener"><img src="#" alt="Personal Project 2"></a>
+      </div>
+    </section>
+
+    <!-- CONTACT SECTION -->
+    <section id="contact">
+      <h2>Contact Me</h2>
+
+      <form id="contactForm">
+        <label for="senderName">Your Name:</label>
+        <input type="text" id="senderName" required />
+
+        <label for="email">Email Address:</label>
+        <input type="email" id="email" required />
+
+        <label for="subject">Subject:</label>
+        <input type="text" id="subject" />
+
+        <label for="message">Message:</label>
+        <textarea id="message" rows="5" required></textarea>
+
+        <div class="tooltip">
+          <button type="submit" id="submitBtn">Submit</button>
+          <span class="tooltiptext">Click to send your message!</span>
+        </div>
+      </form>
+    </section>
+
+  </main>
+
+  <script src="script.js"></script>
 </body>
 </html>
