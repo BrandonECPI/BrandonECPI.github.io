@@ -26,7 +26,7 @@ This website serves as a portfolio to highlight my work and provide information 
 - HTML5
 - CSS3
 - JavaScript (if applicable)
-- [Any other technologies you used, e.g., frameworks, libraries]
+
 
 ## Usage
 
